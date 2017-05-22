@@ -33,6 +33,17 @@ public class ProductDetails {
 	@Column(name = "productprice")
 	private int productprice;
 	
+	@Column(name = "productstock")
+	private int productstock; 
+	
+	public int getProductstock() {
+		return productstock;
+	}
+
+	public void setProductstock(int productstock) {
+		this.productstock = productstock;
+	}
+
 	@Column(name = "CatId")
 	private int catId;
 	

@@ -19,13 +19,7 @@
       <li class="active"><a href="home">Home</a></li>
       <ul class="nav navbar-nav">
       
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="pro"></a>Womens Wear</li>
-          <li><a href="pro"></a>Mens Wear</li>
-          <li><a href="pro"></a>Kids Wear</li>
-        </ul>
-      
+         <li><a href="products">Product</a></li>
      
       
       <li><a href="adm"><span class="glyphicon glyphicon-admin"></span> Admin</a></li>

@@ -14,13 +14,20 @@
 <center><tr>
    <td><h1>Supplier Form</h1></td>
 </tr><center>
-<table>
-<tr><td>SupplierId:</td><td><form:input path="supplierId"/></td></tr>
-<tr><td>SupplierName:</td><td><form:input path="supplierName"/></td></tr>
-<tr><td>SupplierDescription:</td><td><form:input path="supplierDescription"/></td></tr>
 
+<tr><td>&nbsp;</td></tr>
+
+
+<table>
+<tr><td><b>SupplierId:</b></td><td><form:input path="supplierId" size="25"/></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b>SupplierName:</b></td><td><form:input path="supplierName" size="25"/></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b>SupplierDescription:</b></td><td><form:input path="supplierDescription" size="25"/></td></tr>
+
+ <tr><td>&nbsp;</td></tr> 
  
-<tr><td><input type="submit" value="submit"></td></tr>
+<tr><td><input type="submit" value="${bname}"></td></tr>
 
 
 </table>
@@ -43,7 +50,7 @@
                   <td>${supplier.supplierDescription}</td>
                 
                 
-                     <td><a href="UpdateAdmprod?adpid=${supplier.supplierId}">Edit</a></td>
+                     <td><a href="deladsup1?adsid1=${supplier.supplierId}">Edit</a></td>
                 <td><a href="deladsup?adsid=${supplier.supplierId}">Delete</a></td>
                 
 </tr>

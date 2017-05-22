@@ -24,6 +24,7 @@ CatDao cc;
 		List l=cc.retriveCategory();
 		ModelAndView mv=new ModelAndView("category","CategoryDetails",c);
 		mv.addObject("CatData", l);
+		mv.addObject("bname", "ADD Category");
 		return mv;
 	}
 
@@ -38,6 +39,7 @@ CatDao cc;
 		List l=cc.retriveCategory();
 		ModelAndView mv=new ModelAndView("category","CategoryDetails",c1);
 		mv.addObject("CatData", l);
+		mv.addObject("bname", "ADD Category");
 		return mv;
 	}
 	
@@ -50,6 +52,20 @@ CatDao cc;
 	List l=cc.retriveCategory();
 	ModelAndView mv=new ModelAndView("category","CategoryDetails",c1);
 	mv.addObject("CatData", l);
+	mv.addObject("bname", "ADD Category");
 	return mv;
 }
+	@RequestMapping("/deladcat1")
+	public  ModelAndView editcat(@RequestParam("adcid1")int cid)
+	{
+	CategoryDetails cd=cc.editcategory(cid);
+	
+	List l=cc.retriveCategory();
+	ModelAndView mv=new ModelAndView("category","CategoryDetails",cd);
+	mv.addObject("CatData", l);
+	mv.addObject("bname", "Update Category");
+	return mv;
+}
+	
+	
 }

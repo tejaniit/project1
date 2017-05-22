@@ -21,7 +21,7 @@ public class SupDao {
 	{
 		Session session=sessionFactory.openSession();
 		Transaction t=session.beginTransaction();
-		session.save(ss); 
+		session.saveOrUpdate(ss);
 		t.commit();
 		session.close();
 		
@@ -51,4 +51,14 @@ public class SupDao {
 		t.commit();
 		session.close();
 	}
+	
+	public  SupplierDetails editsupplier(int sid)
+	{
+		Session session=sessionFactory.openSession();
+		Transaction t=session.beginTransaction();
+		SupplierDetails s=(SupplierDetails)session.get(SupplierDetails.class, sid);
+		return s;
+	}
+	
+	
 }

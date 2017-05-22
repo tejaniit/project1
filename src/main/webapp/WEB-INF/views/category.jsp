@@ -14,13 +14,19 @@
 <center><tr>
    <td><h1>Category Form</h1></td>
 </tr><center>
+
+<tr><td>&nbsp;</td></tr>
+
 <table>
-<tr><td>CategoryId:</td><td><form:input path="categoryId"/></td></tr>
-<tr><td>CategoryName:</td><td><form:input path="categoryName"/></td></tr>
-<tr><td>CategoryDescription:</td><td><form:input path="categoryDescription"/></td></tr>
+<tr><td><b>CategoryId:</b></td><td><form:input path="categoryId" size="25"/></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b>CategoryName:</b></td><td><form:input path="categoryName" size="25"/></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b>CategoryDescription:</b></td><td><form:input path="categoryDescription" size="25"/>
+</td></tr><tr><td>&nbsp;</td></tr>
 
  
-<tr><td><input type="submit" value="submit"></td></tr>
+<tr><td><input type="submit" value="${bname}"></td></tr>
 
 
 </table>
@@ -44,7 +50,7 @@
                   <td>${category.categoryDescription}</td>
                 
                 
-                     <td><a href="UpdateAdmprod?adpid=${category.categoryId}">Edit</a></td>
+                     <td><a href="deladcat1?adcid1=${category.categoryId}">Edit</a></td>
                 <td><a href="deladcat?adcid=${category.categoryId}">Delete</a></td>
                 
 </tr>

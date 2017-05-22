@@ -16,27 +16,41 @@
 <center><tr>
    <td><h1>Product Form</h1></td>
 </tr><center>
+
+<tr><td>&nbsp;</td></tr>
+
 <table>
-<tr><td>ProductId:</td><td><form:input path="productId"/></td></tr>
-<tr><td>productName:</td><td><form:input path="productname"/></td></tr>
-<tr><td>productDescription:</td><td><form:input path="productdescription"/></td></tr>
-<tr><td>productPrice:</td><td><form:input path="productprice"/></td></tr>
-<tr><td> SupplierName<form:select class="form-control" path="supId">
+<tr><td><b>ProductId:</b></td><td><form:input path="productId" size="25"/></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b>productName:</b></td><td><form:input path="productname" size="25"/></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b>productDescription:</b></td><td><form:input path="productdescription" size="25"/></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b>productPrice:</b></td><td><form:input path="productprice" size="25"/></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b>productStock:</b></td><td><form:input path="productstock" size="25"/></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b>SupplierName</b><form:select class="form-control" path="supId">
 <form:option value="-1">select supplier name</form:option>
 <c:forEach items="${SupData}" var="sup">
 <form:option value=" ${sup.supplierId}">${sup.supplierName}</form:option>
+
 </c:forEach>
 </form:select></tr></td>
-<tr><td>CategoryName<form:select class="form-control" path="catId">
+<tr><td>&nbsp;</td></tr>
+<tr><td><b>CategoryName</b><form:select class="form-control" path="catId">
 <form:option value="-1">select category name</form:option>
 <c:forEach items="${CatData}" var="cat">
 <form:option value=" ${cat.categoryId}">${cat.categoryName}</form:option>
 </c:forEach>
+<tr><td>&nbsp;</td></tr>
 </form:select></tr></td>
-<tr><td>Image
+<tr><td><b>Image</b>
 <form:input type="file" path="pimage"/></td></tr>
+
+<tr><td>&nbsp;</td></tr>
  
-<tr><td><input type="submit" value="submit"></td></tr>
+<tr><td><input type="submit" value="${bname}"></td></tr>
 
 
 </table>
@@ -48,6 +62,7 @@
 <th>Supplier Id</th>
 <th>Category Id</th>
 <th>Price</th>
+<th>stock</th>
 <th>Description</th>
 <th>Edit</th>
 <th>Delete</th>
@@ -61,11 +76,12 @@
                   <td>${product.supId}</td>
                 <td> ${product.catId}</td>
                 <td>${product.productprice}</td>
+                <td>${product.productstock}</td>
                  <td>${product.productdescription}</td>
                  
                
                     
-                     <td><a href="UpdateAdmprod?adpid=${product.productId}">Edit</a></td>
+                     <td><a href="deladprod1?adpid1=${product.productId}">Edit</a></td>
                 <td><a href="deladprod?adpid=${product.productId}">Delete</a></td>
                 <td><img src="./resources/images/${product.productId}.jpg" height="50px" width="50px"/></td> 
 
@@ -73,12 +89,5 @@
 </c:forEach>
 
 </table>
-
-
-
-
-
-
-
 </body>
 </html>

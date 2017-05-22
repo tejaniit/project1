@@ -23,6 +23,7 @@ SupDao sd;
 		List l1=sd.retriveSupplier();
 		ModelAndView mv=new ModelAndView("supplier","SupplierDetails",s);
 		mv.addObject("SupData", l1);
+		mv.addObject("bname","Add supplier");
 		return mv;
 	}
 
@@ -35,6 +36,7 @@ SupDao sd;
 		List l1=sd.retriveSupplier();
 		ModelAndView mv=new ModelAndView("supplier","SupplierDetails",s1);
 		mv.addObject("SupData", l1);
+		mv.addObject("bname","Add supplier");
 		return mv;
 	}
 	@RequestMapping("/deladsup")
@@ -46,6 +48,19 @@ SupDao sd;
 	List l1=sd.retriveSupplier();
 	ModelAndView mv=new ModelAndView("supplier","SupplierDetails",s1);
 	mv.addObject("SupData", l1);
+	mv.addObject("bname","Add supplier");
+	return mv;
+	}
+	
+	@RequestMapping("/deladsup1")
+	public  ModelAndView editsd(@RequestParam("adsid1")int sid)
+	{
+	sd.editsupplier(sid);
+	SupplierDetails s1=sd.editsupplier(sid);
+	List l1=sd.retriveSupplier();
+	ModelAndView mv=new ModelAndView("supplier","SupplierDetails",s1);
+	mv.addObject("SupData", l1);
+	mv.addObject("bname","Update");
 	return mv;
 	}
 }

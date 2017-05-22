@@ -13,14 +13,20 @@
 <center><tr>
    <td><h1>Registration Form</h1></td>
 </tr><center>
+<tr><td>&nbsp;</td></tr>
 <table>
-<tr><td>UserName:</td><td><form:input path="userName"/></td></tr>
-<tr><td>Password:</td><td><form:password path="password"/></td></tr>
-<tr><td>Email:</td><td><form:input path="email"/></td></tr>
-<tr><td>UserId:</td><td><form:input path="userId"/></td></tr>
-<tr><td>name:</td><td><form:input path="name"/></td></tr>
-<tr><td>mobile:</td><td><form:input path="mobile"/></td></tr>
- 
+<tr><td><b>UserName:</b></td><td><form:input path="userName"  size="35"/></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b>Password:</b></td><td><form:password path="password" size="35"/></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b>Email:</b></td><td><form:input path="email" size="35"/></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b>UserId:</b></td><td><form:input path="userId" size="35"/></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b>Name:</b></td><td><form:input path="name" size="35"/></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><b>Mobile:</b></td><td><form:input path="mobile" size="35"/></td></tr>
+<tr><td>&nbsp;</td></tr>
 <tr><td><input type="submit" value="Register"></td></tr>
 
 

@@ -22,7 +22,7 @@ public class ProdDao {
 		Session session=sessionFactory.openSession();
 		Transaction t=session.beginTransaction();
 		System.out.println(pp.getProductId());
-		session.save(pp); 
+		session.saveOrUpdate(pp); 
 		t.commit();
 		session.close();
 		
@@ -49,6 +49,14 @@ public class ProdDao {
 		session.delete(p);
 		t.commit();
 		session.close();
+	}
+	
+	public ProductDetails editproduct(int pid)
+	{
+		Session session=sessionFactory.openSession();
+		Transaction t=session.beginTransaction();
+		ProductDetails p=(ProductDetails)session.get(ProductDetails.class, pid);
+		return p;
 	}
 	
 }

@@ -1,9 +1,10 @@
- package com.eshop.controller;
+package com.eshop.controller;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -62,22 +63,24 @@ public class product {
 		mv.addObject("SupData", l1);
 		mv.addObject("CatData", l);
 		mv.addObject("Prodata", l2);
-		
+		mv.addObject("bname", "ADD Product");
 		return mv;
 	}
 	
 	@RequestMapping(value="/product",method=RequestMethod.POST)
 	public ModelAndView postProd(@ModelAttribute("ProductDetails") ProductDetails p)
 	{
+		pd.insertprod(p);
+		ProductDetails p1=new ProductDetails();
 		List l=cc.retriveCategory();
 		List l1=sd.retriveSupplier();
 		List l2=pd.retriveProd();
-		ProductDetails p1=new ProductDetails();
+		
 		ModelAndView mv=new ModelAndView("product","ProductDetails",p1);
 		mv.addObject("SupData", l1);
 		mv.addObject("CatData", l);
 		mv.addObject("Prodata",l2);
-		pd.insertprod(p);
+		
 		String path="E:\\webproject\\ekart\\src\\main\\webapp\\resources\\images\\";
 		path=path+String.valueOf(p.getProductId())+".jpg";
 		MultipartFile file=p.getPimage();
@@ -95,7 +98,7 @@ public class product {
 			e.printStackTrace();
 		}
 		
-	
+		mv.addObject("bname", "ADD Product");
 		
 		return mv;
 	}
@@ -104,16 +107,60 @@ public class product {
 	{
 		System.out.println(pid);
 	pd.deletproduct(pid);
+	ProductDetails p1=new ProductDetails();
 	List l=cc.retriveCategory();
 	List l1=sd.retriveSupplier();
 	List l2=pd.retriveProd();
-	ProductDetails p1=new ProductDetails();
+	
 	ModelAndView mv=new ModelAndView("product","ProductDetails",p1);
 	mv.addObject("SupData", l1);
 	mv.addObject("CatData", l);
 	mv.addObject("Prodata",l2);
+	mv.addObject("bname", "ADD Product");
 	return mv;
 	}
 	
+	@RequestMapping("/deladprod1")
+	public  ModelAndView editpd(@RequestParam("adpid1")int pid)
+	{
+		
+		ProductDetails p1= pd.editproduct(pid);
+	
+	List l=cc.retriveCategory();
+	List l1=sd.retriveSupplier();
+	List l2=pd.retriveProd();
+	
+	ModelAndView mv=new ModelAndView("product","ProductDetails",p1);
+	mv.addObject("SupData", l1);
+	mv.addObject("CatData", l);
+	mv.addObject("Prodata",l2);
+	mv.addObject("bname", "Update Product");
+	return mv;
+	}
+	
+	@RequestMapping(value="/products",method=RequestMethod.GET)
+	public ModelAndView getProd1()
+	{
+		ProductDetails p=new ProductDetails();
+		List l=cc.retriveCategory();
+		List l1=sd.retriveSupplier();
+		List l2=pd.retriveProd();
+		ModelAndView mv=new ModelAndView("prohm","ProductDetails",p);
+		mv.addObject("SupData", l1);
+		mv.addObject("CatData", l);
+		mv.addObject("Prodata", l2);
+		return mv;
+	}
+	
+
+	@RequestMapping(value="/getimg",method=RequestMethod.GET)
+	public ModelAndView getImaage(@RequestParam("gimg")int pid)
+	{
+		ProductDetails p=pd.editproduct(pid);
+		List l=new ArrayList();
+		l.add(p);
+		ModelAndView mv=new ModelAndView("imagepro","ProductDetails",l);
+		return mv;
+	}
 }
 

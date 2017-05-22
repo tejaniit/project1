@@ -26,8 +26,9 @@ public class CatDao {
 		Session session=sessionFactory.openSession();
 		Transaction t=session.beginTransaction();
 		System.out.println(ct.getCategoryId());
-		session.save(ct); 
+		session.saveOrUpdate(ct);
 		t.commit();
+		session.close();
 		
 	}
 	public  List retriveCategory()
@@ -38,6 +39,7 @@ public class CatDao {
 	Query query=session.createQuery(hql);
 	List results= query.list();
 	System.out.println(results );
+	session.close();
 	return results;
 	
 		
@@ -53,5 +55,14 @@ public class CatDao {
 		t.commit();
 		session.close();
 	}
+	
+	public CategoryDetails editcategory(int cid)
+	{
+		Session session=sessionFactory.openSession();
+		Transaction t=session.beginTransaction();
+		CategoryDetails c=(CategoryDetails)session.get(CategoryDetails.class, cid);
+		return c;
+	}
+	
 	
 }
