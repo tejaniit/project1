@@ -18,6 +18,19 @@ public class Admin
 		return "adminHome";
 		
 	}
-
+	
+	@RequestMapping("/contact")
+	public String contact()
+	{
+		return "Contact";
+		
+	}
+	
+	@RequestMapping("/abt")
+	public String abt()
+	{
+		return "about";
+		
+	}
 
 }

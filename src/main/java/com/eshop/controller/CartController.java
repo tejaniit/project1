@@ -1,4 +1,4 @@
-package com.eshop.controller;
+ package com.eshop.controller;
 
 import java.util.List;
 
@@ -30,21 +30,16 @@ public class CartController {
 	{  
 	ProductDetails p= pd.editproduct(id);
 	CartDetails c= new CartDetails();
-	c.setCartId(131);
+	
 	c.setCartUser("teja");
 	c.setProId(p.getProductId());
 	c.setProName(p.getProductname());
 	c.setProPrice(p.getProductprice());
 	ca.insertcart(c);
 	ProductDetails p1=new ProductDetails();
-	List l=cc.retriveCategory();
-	List l1=sd.retriveSupplier();
-	List l2=pd.retriveProd();
-	ModelAndView mv=new ModelAndView("prohm","ProductDetails",p1);
-	mv.addObject("SupData", l1);
-	mv.addObject("CatData", l);
-	mv.addObject("Prodata", l2);
-	return mv;
-	
+
+			List cartList=ca.retrivecart();
+			ModelAndView mv=new ModelAndView("cart","CartData",cartList);
+			return mv;
 }
 }

@@ -23,8 +23,11 @@
      
       
       <li><a href="adm"><span class="glyphicon glyphicon-admin"></span> Admin</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="logn"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       <li><a href="reg"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+      <li><a href="abt"><span class="glyphicon glyphicon-star"></span> AboutUs</a></li>
+      <li><a href="contact"> <span class="glyphicon glyphicon-earphone"></span>ContactUs</a></li>
+      
       
       
       <form class="navbar-form navbar-left">

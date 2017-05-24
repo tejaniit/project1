@@ -1,5 +1,8 @@
 package com.eshop.dao;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -23,4 +26,19 @@ public class CartDao {
 		session.close();
 		
 	}
+	
+	public  List retrivecart()
+	{
+	Session session=sessionFactory.openSession();
+	Transaction t=session.beginTransaction();
+	String hql="from CartDetails";
+	Query query=session.createQuery(hql);
+	List results= query.list();
+	System.out.println(results );
+	session.close();
+	return results;
+	
+		
+	}
+	
 }
