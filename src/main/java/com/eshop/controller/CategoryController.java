@@ -14,7 +14,7 @@ import com.eshop.dao.CatDao;
 import com.eshop.model.CategoryDetails;
 import com.eshop.model.SupplierDetails;
 @Controller
-public class Category {
+public class CategoryController {
 @Autowired
 CatDao cc;
 	@RequestMapping("/cat")

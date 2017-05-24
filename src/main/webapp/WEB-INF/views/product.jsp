@@ -24,7 +24,7 @@
 <tr><td>&nbsp;</td></tr>
 <tr><td><b>productName:</b></td><td><form:input path="productname" size="25"/></td></tr>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>productDescription:</b></td><td><form:input path="productdescription" size="25"/></td></tr>
+<tr><td><b>productDescription:</b></td><td><form:input path="productdescription"  size="25"/></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td><b>productPrice:</b></td><td><form:input path="productprice" size="25"/></td></tr>
 <tr><td>&nbsp;</td></tr>

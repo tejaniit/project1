@@ -24,7 +24,7 @@ import com.eshop.model.CategoryDetails;
 import com.eshop.model.ProductDetails;
 import com.eshop.model.SupplierDetails;
 @Controller
-public class product {
+public class ProductController {
 	@Autowired
 	CatDao cc;
 	@Autowired
@@ -36,28 +36,7 @@ public class product {
 	{
 		ProductDetails p=new ProductDetails();
 		List l=cc.retriveCategory();
-		
-		/*Iterator i=l.iterator();
-		while(i.hasNext())
-		{
-			Object o=i.next();
-			CategoryDetails c2=(CategoryDetails)o;
-			System.out.println(c2.getCategoryId());
-			
-		}*/
-		
-		
-		
-		
 		List l1=sd.retriveSupplier();
-		/*Iterator i1=l1.iterator();
-		while(i1.hasNext())
-		{
-			Object o=i1.next();
-			SupplierDetails s2=(SupplierDetails)o;
-			System.out.println(s2.getSupplierId());
-		}
-		*/
 		List l2=pd.retriveProd();
 		ModelAndView mv=new ModelAndView("product","ProductDetails",p);
 		mv.addObject("SupData", l1);
@@ -159,7 +138,7 @@ public class product {
 		ProductDetails p=pd.editproduct(pid);
 		List l=new ArrayList();
 		l.add(p);
-		ModelAndView mv=new ModelAndView("imagepro","ProductDetails",l);
+		ModelAndView mv=new ModelAndView("single","ProductDetails",l);
 		return mv;
 	}
 }

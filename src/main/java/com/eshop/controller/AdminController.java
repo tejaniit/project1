@@ -9,12 +9,13 @@ import org.springframework.web.servlet.ModelAndView;
 import com.eshop.model.AdminDetails;
 
 @Controller
-public class Admin 
+public class AdminController 
 {
 	
 	@RequestMapping("/adm")
 	public String adm()
-	{
+	{ 
+		System.out.println("in adm");
 		return "adminHome";
 		
 	}

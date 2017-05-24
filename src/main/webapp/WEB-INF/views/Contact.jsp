@@ -12,7 +12,7 @@
             <form>
             <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
             <address>
-                <strong>NIIT, Inc.</strong><br>
+               <h5><strong><b>Sanju's Couture, Inc.</b></strong><br></h5> 
                 Basheerbagh, Hyderabad<br>
                 Telangana, India-500029<br>
                 <abbr title="Phone">

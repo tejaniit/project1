@@ -29,9 +29,6 @@
         <img src="resources/4.jpg"  style="width:80%;">
       </div>
       
-      <div class="item">
-        <img src="resources/5.jpg"  style="width:100%;">
-      </div>
     </div>
 
     <!-- Left and right controls -->

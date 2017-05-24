@@ -21,13 +21,13 @@ http://www.springframework.org/schema/security/spring-security.xsd">
 
 			
     
-<security:intercept-url pattern="/adminhome" access="hasRole('ADMIN_ROLE')" />
+<security:intercept-url pattern="/adminHome" access="hasRole('ADMIN_ROLE')" />
 
   
-<security:intercept-url pattern="/AddToCart" access="hasRole('USER_ROLE')" />  
+<security:intercept-url pattern="/AddToCart" access="hasRole('ROLE_USER')" />  
     
 
-<security:form-login login-page="/Login" default-target-url="/" login-processing-url="/perform_login" authentication-failure-url="/LoginError" authentication-success-forward-url="/login_session_attributes" />
+<security:form-login login-page="/logn" default-target-url="/" login-processing-url="/perform_login" authentication-failure-url="/LoginError" authentication-success-forward-url="/login_session_attributes" />
 
 <security:logout logout-url="/perform_logout" invalidate-session="true" logout-success-url="/" />
 

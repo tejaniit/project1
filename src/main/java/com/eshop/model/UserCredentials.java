@@ -20,10 +20,10 @@ public class UserCredentials {
 	@Column(name = "password")
 	private String password;
 	
-	@Transient
+	@Column(name = "role")
 	private String role;
 	
-	@Transient
+	@Column(name = "enabled")
 	private boolean enabled;
 	
 	public String getUserName() {
