@@ -1,4 +1,4 @@
-package com.eshop.dao;
+ package com.eshop.dao;
 
 import java.util.List;
 
@@ -43,7 +43,7 @@ public class RegDao {
 				    
 				//creating transaction object    
 				Transaction t=session.beginTransaction();    
-		String hql = "from "+" UserCredential "+" where username=" + "'"+username+"'";
+		String hql = "from "+" UserCredentials "+" where username=" + "'"+username+"'";
 		@SuppressWarnings("rawtypes")
 		Query query = session.createQuery(hql);
 		

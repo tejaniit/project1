@@ -31,6 +31,7 @@ RegDao rd;
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/login_session_attributes")
 	public String login_session_attributes(HttpSession session,Model model) {
+		System.out.println("hii logged");
 		String userid = SecurityContextHolder.getContext().getAuthentication().getName();
 		UserCredentials  user = rd.getUser(userid); 
 		System.out.println("hii logged");

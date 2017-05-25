@@ -9,9 +9,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ include file="UserHeader.jsp" %>
+<%@ include file="UserHeader.jsp" %> 
 <div>
-<form action="perform_login" >
+<form action="perform_login" method="post" >
 <center><tr>
    <td><h1><b><font face="Monotype corsiva" size="7">Login Form</font><br /></b></h1></td>
 </tr><center>

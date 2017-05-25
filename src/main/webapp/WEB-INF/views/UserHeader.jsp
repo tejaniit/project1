@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Bootstrap Example</title>
@@ -24,6 +24,7 @@
       
       <li><a href="adm"><span class="glyphicon glyphicon-admin"></span> Admin</a></li>
       <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="perform_logout"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
       <li><a href="reg"><span class="glyphicon glyphicon-user"></span> Register</a></li>
       <li><a href="abt"><span class="glyphicon glyphicon-star"></span> AboutUs</a></li>
       <li><a href="contact"> <span class="glyphicon glyphicon-earphone"></span>ContactUs</a></li>
