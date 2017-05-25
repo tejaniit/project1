@@ -27,7 +27,7 @@ http://www.springframework.org/schema/security/spring-security.xsd">
 <security:intercept-url pattern="/AddToCart" access="hasRole('ROLE_USER')" />  
     
 
-<security:form-login login-page="/logn" default-target-url="/" login-processing-url="/perform_login" authentication-failure-url="/LoginError" authentication-success-forward-url="/login_session_attributes" />
+<security:form-login login-page="/Login" default-target-url="/" login-processing-url="/perform_login" authentication-failure-url="/LoginError" authentication-success-forward-url="/login_session_attributes" />
 
 <security:logout logout-url="/perform_logout" invalidate-session="true" logout-success-url="/" />
 
@@ -39,8 +39,8 @@ http://www.springframework.org/schema/security/spring-security.xsd">
 		<security:authentication-provider>
 			<security:jdbc-user-service
 				data-source-ref="dataSource"
-				users-by-username-query="select username,password,enabled from USERCREADENTIAL where username=?"
-				authorities-by-username-query="select username, role from USERCREADENTIAL  where username =?" />
+				users-by-username-query="select username,password,enabled from USERCREDENTIALS  where username=?"
+				authorities-by-username-query="select username, role from USERCREDENTIALS  where username =?" />
 		</security:authentication-provider>
 	</security:authentication-manager>
 

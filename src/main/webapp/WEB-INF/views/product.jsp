@@ -14,23 +14,23 @@
 
 <form:form class="form-horizontal" method="post" action="product"	commandName="ProductDetails" enctype="multipart/form-data" >
 <center><tr>
-   <td><h1>Product Form</h1></td>
+   <td><h1><font face="Monotype corsiva" size="7">Product Form</font><br /></h1></td>
 </tr><center>
 
 <tr><td>&nbsp;</td></tr>
 
 <table>
-<tr><td><b>ProductId:</b></td><td><form:input path="productId" size="25"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">Product Id</font><br /></b></td><td><form:input path="productId" size="25"/></td></tr>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>productName:</b></td><td><form:input path="productname" size="25"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">Product Name</font><br /></b></td><td><form:input path="productname" size="25"/></td></tr>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>productDescription:</b></td><td><form:input path="productdescription"  size="25"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">Product Description</font><br /></b></td><td><form:textarea path="productdescription"  rows="5" cols="30"/></td></tr>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>productPrice:</b></td><td><form:input path="productprice" size="25"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">Product Price</font><br /></b></td><td><form:input path="productprice" size="25"/></td></tr>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>productStock:</b></td><td><form:input path="productstock" size="25"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">Product Stock</font><br /></b></td><td><form:input path="productstock" size="25"/></td></tr>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>SupplierName</b><form:select class="form-control" path="supId">
+<tr><td><b><font face="Monotype corsiva" size="3">Supplier Name</font><br /></b><form:select class="form-control" path="supId">
 <form:option value="-1">select supplier name</form:option>
 <c:forEach items="${SupData}" var="sup">
 <form:option value=" ${sup.supplierId}">${sup.supplierName}</form:option>
@@ -38,14 +38,14 @@
 </c:forEach>
 </form:select></tr></td>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>CategoryName</b><form:select class="form-control" path="catId">
+<tr><td><b><font face="Monotype corsiva" size="3">Category Name</font><br /></b><form:select class="form-control" path="catId">
 <form:option value="-1">select category name</form:option>
 <c:forEach items="${CatData}" var="cat">
 <form:option value=" ${cat.categoryId}">${cat.categoryName}</form:option>
 </c:forEach>
 <tr><td>&nbsp;</td></tr>
 </form:select></tr></td>
-<tr><td><b>Image</b>
+<tr><td><b><font face="Monotype corsiva" size="3">Product Image</font><br /></b>
 <form:input type="file" path="pimage"/></td></tr>
 
 <tr><td>&nbsp;</td></tr>

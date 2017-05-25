@@ -8,17 +8,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+
 </head>
 <body>
+<div class="container">
+	<div class="row">
+   <div class="col-xs-4 item-photo">
 <div>
 <c:forEach var="product" items="${ProductDetails}">
 <th><b><h1> Product Image</h1></b></th>
-			<td><img src="resources/images/${product.productId}.jpg"
+			<td><img src="./resources/images/${product.productId}.jpg"
 				style="width: 330px; height: 315px" /></td>
 				</c:forEach>
 				</div>
-
+				</div>
+		
+ <div class="col-xs-5" style="border:0px solid gray">
 <div>
 
 	<table class="table table-bordered table-hover table-striped">
@@ -62,7 +67,8 @@
 
 		</c:forEach>
 	</table>
-	
+	</div>
+	</div>
 </div>
 </body>
 </html>

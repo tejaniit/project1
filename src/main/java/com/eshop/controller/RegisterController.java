@@ -48,7 +48,7 @@ public class RegisterController {
 		  ModelAndView mv=new ModelAndView("regsuccess","data","welcome to project");
 		  
 		  UserCredentials uc=new UserCredentials();
-		  uc.setUserName(u.getUserName());
+		  uc.setUsername(u.getUsername());
 		  uc.setPassword(u.getPassword());
 		  uc.setRole("ROLE_USER");
 		  uc.setEnabled(true);

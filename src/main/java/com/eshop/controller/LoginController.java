@@ -21,7 +21,7 @@ public class LoginController {
 @Autowired
 RegDao rd;
 	
-	@RequestMapping("/logn")
+	@RequestMapping("/Login")
 	public ModelAndView log()
 	{
 		UserCredentials u=new UserCredentials();
@@ -33,9 +33,12 @@ RegDao rd;
 	public String login_session_attributes(HttpSession session,Model model) {
 		String userid = SecurityContextHolder.getContext().getAuthentication().getName();
 		UserCredentials  user = rd.getUser(userid); 
-		session.setAttribute("userId", user.getUserName());
+		System.out.println("hii logged");
+		session.setAttribute("userId", user.getUsername());
 		session.setAttribute("name", user.getPassword());
+		System.out.println("hii logged");
 		session.setAttribute("LoggedIn", "true");
+		
 		
 		 //session.setAttribute("crtcnt",count);
 		Collection<GrantedAuthority> authorities = (Collection<GrantedAuthority>) SecurityContextHolder.getContext().getAuthentication().getAuthorities();
@@ -47,7 +50,7 @@ RegDao rd;
 		     if (authority.getAuthority().equals(role)) 
 		     {
 		    	 session.setAttribute("UserLoggedIn", true);
-		    	 session.setAttribute("UserName", user.getUserName());
+		    	 session.setAttribute("UserName", user.getUsername());
 			 page="/index1";
 		    	 session.setAttribute("test",1);
 		    	
@@ -55,7 +58,7 @@ RegDao rd;
 		     else 
 		     {
 		    	 session.setAttribute("Administrator",true);
-		    	 session.setAttribute("UserName", user.getUserName());
+		    	 session.setAttribute("UserName", user.getUsername());
 		    	 page="/adminHome";
 			
 		    }

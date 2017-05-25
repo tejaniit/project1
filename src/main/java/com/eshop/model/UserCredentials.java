@@ -14,8 +14,8 @@ import org.springframework.stereotype.Component;
 public class UserCredentials {
 
 	@Id
-	@Column(name = "userName")
-	private String userName;
+	@Column(name = "username")
+	private String username;
 	
 	@Column(name = "password")
 	private String password;
@@ -26,11 +26,13 @@ public class UserCredentials {
 	@Column(name = "enabled")
 	private boolean enabled;
 	
-	public String getUserName() {
-		return userName;
+
+
+	public String getUsername() {
+		return username;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public String getPassword() {
 		return password;

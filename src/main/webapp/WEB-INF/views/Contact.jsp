@@ -12,7 +12,7 @@
             <form>
             <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
             <address>
-               <h5><strong><b>Sanju's Couture, Inc.</b></strong><br></h5> 
+               <h5><strong><b><font face="Monotype corsiva" size="5">Sanju's Couture, Inc</font><br /></b></strong><br></h5> 
                 Basheerbagh, Hyderabad<br>
                 Telangana, India-500029<br>
                 <abbr title="Phone">
@@ -21,7 +21,7 @@
             </address>
             <address>
                 <strong>Email</strong><br>
-                <a href="mailto:#">tejashreemudiraj30@gmail.com</a>
+                <a href="mailto:#"><font face="Monotype corsiva" size="5">tejashreemudiraj30@gmail.com</font><br /></a>
             </address>
             </form>
         </div>

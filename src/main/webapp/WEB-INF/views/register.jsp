@@ -11,21 +11,21 @@
 <%@ include file="UserHeader.jsp" %>
 <form:form class="form-horizontal" method="post" action="register"	commandName="UserDetails" >
 <center><tr>
-   <td><h1>Registration Form</h1></td>
+   <td><h1><font face="Monotype corsiva" size="7">Registration Form</font><br /></h1></td>
 </tr><center>
 <tr><td>&nbsp;</td></tr>
 <table>
-<tr><td><b>UserName:</b></td><td><form:input path="userName"  size="35"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">UserName:</font><br /></b></td><td><form:input path="username"  size="35"/></td></tr>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>Password:</b></td><td><form:password path="password" size="35"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">Password:</font><br /></b></td><td><form:password path="password" size="35"/></td></tr>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>Email:</b></td><td><form:input path="email" size="35"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">Email:</font><br /></b></td><td><form:input path="email" size="35"/></td></tr>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>UserId:</b></td><td><form:input path="userId" size="35"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">UserId</font><br /></b></td><td><form:input path="userId" size="35"/></td></tr>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>Name:</b></td><td><form:input path="name" size="35"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">Name:</font><br /></b></td><td><form:input path="name" size="35"/></td></tr>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>Mobile:</b></td><td><form:input path="mobile" size="35"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">Mobile:</font><br /></b></td><td><form:input path="mobile" size="35"/></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td><input type="submit" value="Register"></td></tr>
 

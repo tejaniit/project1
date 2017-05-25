@@ -12,18 +12,18 @@
 <%@ include file="admin.jsp" %>
 <form:form class="form-horizontal" method="post" action="supp"	commandName="SupplierDetails" >
 <center><tr>
-   <td><h1>Supplier Form</h1></td>
+   <td><h1><font face="Monotype corsiva" size="7">Supplier Form</font><br /></h1></td>
 </tr><center>
 
 <tr><td>&nbsp;</td></tr>
 
 
 <table>
-<tr><td><b>SupplierId:</b></td><td><form:input path="supplierId" size="25"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">Supplier Id:</font><br /></b></td><td><form:input path="supplierId" size="25"/></td></tr>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>SupplierName:</b></td><td><form:input path="supplierName" size="25"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">Supplier Name:</font><br /></b></td><td><form:input path="supplierName" size="25"/></td></tr>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>SupplierDescription:</b></td><td><form:input path="supplierDescription" size="25"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">Supplier Description:</font><br /></b></td><td><form:input path="supplierDescription" size="25"/></td></tr>
 
  <tr><td>&nbsp;</td></tr> 
  

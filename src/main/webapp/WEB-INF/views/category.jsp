@@ -12,17 +12,17 @@
 <%@ include file="admin.jsp" %>
 <form:form class="form-horizontal" method="post" action="cate"	commandName="CategoryDetails" >
 <center><tr>
-   <td><h1>Category Form</h1></td>
+   <td><h1><font face="Monotype corsiva" size="7">Category Form</font><br /></h1></td>
 </tr><center>
 
 <tr><td>&nbsp;</td></tr>
 
 <table>
-<tr><td><b>CategoryId:</b></td><td><form:input path="categoryId" size="25"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">Category Id:</font><br /></b></td><td><form:input path="categoryId" size="25"/></td></tr>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>CategoryName:</b></td><td><form:input path="categoryName" size="25"/></td></tr>
+<tr><td><b><font face="Monotype corsiva" size="3">Category Name:</font><br /></b></td><td><form:input path="categoryName" size="25"/></td></tr>
 <tr><td>&nbsp;</td></tr>
-<tr><td><b>CategoryDescription:</b></td><td><form:input path="categoryDescription" size="25"/>
+<tr><td><b><font face="Monotype corsiva" size="3">Category description:</font><br /></b></td><td><form:input path="categoryDescription" size="25"/>
 </td></tr><tr><td>&nbsp;</td></tr>
 
  
