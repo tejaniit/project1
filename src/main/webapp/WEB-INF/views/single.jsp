@@ -13,45 +13,45 @@
 <body>
 <div class="container">
 	<div class="row">
-   <div class="col-xs-4 item-photo">
+   <div class="col-xs-6 item-photo">
 <div>
 <c:forEach var="product" items="${ProductDetails}">
-<th><b><h1> Product Image</h1></b></th>
-			<td><img src="./resources/images/${product.productId}.jpg"
-				style="width: 330px; height: 315px" /></td>
+
+			<img src="./resources/images/${product.productId}.jpg"
+				style="width: 330px; height: 315px" />
 				</c:forEach>
 				</div>
 				</div>
 		
- <div class="col-xs-5" style="border:0px solid gray">
+ <div class="col-xs-8" >
 <div>
 
-	<table class="table table-bordered table-hover table-striped">
-		<tr>
-			<th>Product name</th>
+	
+	
+			<th><b>Product name:</b></th>
            
-		</tr>
+	
 		<c:forEach var="product" items="${ProductDetails}">
-			<td>"${product.productname}"</td>
+			"${product.productname}"
 			</c:forEach>
 			</div>
 <div>
- <tr><th>Stock</th></tr>
+ <th><b>Stock:</b></th>
 <c:forEach var="product" items="${ProductDetails}">
-       <td>${product.productstock}</td>      
+       "${product.productstock}"
 </c:forEach>
 				</div>
 				<div>
- <tr><th>Product Description</th></tr>
+ <th><b>Product Description:</b></th>
 <c:forEach var="product" items="${ProductDetails}">
-       <td>${product.productdescription}</td>      
+       "${product.productdescription}"
 </c:forEach>
 				</div>
 				
 								<div>
- <tr><th>Product Price</th></tr>
+ <th><b>Product Price:</b></th>
 <c:forEach var="product" items="${ProductDetails}">
-       <td>${product.productprice}</td>     
+       "${product.productprice}"    
 </c:forEach>
 				</div>
 		<div>

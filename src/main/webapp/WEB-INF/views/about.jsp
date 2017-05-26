@@ -8,7 +8,7 @@
 </head>
 <body>
 <%@ include file="UserHeader.jsp" %>
-<p>ABOUT US</p>
+<p><font face="Monotype corsiva" size="5">ABOUT US</font><br /></p>
 
 <p>Shop the new Indian designer wear  in store and on-line.   At Sanju's Couture  we’re in the business of satisfying clients by providing them the most desirable luxury labels with an enhanced, personalized, and unrivaled shopping experience.</p>
 

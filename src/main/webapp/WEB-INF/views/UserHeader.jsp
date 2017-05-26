@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body background="resources/hh.jpg">
+<body background="resources/6.jpg">
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -16,15 +16,15 @@
       <a class="navbar-brand" href="#"><b><font face="Monotype corsiva" size="5">Sanju's Couture</font><br /></b></a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="home">Home</a></li>
+      <li class="active"><a href="home"><span class="glyphicon glyphicon-home"></span>Home</a></li>
       <ul class="nav navbar-nav">
       
          <li><a href="products">Product</a></li>
      
       
-      <li><a href="adm"><span class="glyphicon glyphicon-admin"></span> Admin</a></li>
+      
       <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      <li><a href="perform_logout"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
+      <li><a href="perform_logout"> LogOut</a></li>
       <li><a href="reg"><span class="glyphicon glyphicon-user"></span> Register</a></li>
       <li><a href="abt"><span class="glyphicon glyphicon-star"></span> AboutUs</a></li>
       <li><a href="contact"> <span class="glyphicon glyphicon-earphone"></span>ContactUs</a></li>
