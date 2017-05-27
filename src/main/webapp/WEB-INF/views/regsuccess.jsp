@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-successfuly registered
+<%@ include file="UserHeader.jsp" %>
+<b><font face="Monotype corsiva" size="3">successfuly registered</font></b>
 </body>
 </html>

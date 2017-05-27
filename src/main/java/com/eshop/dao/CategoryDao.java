@@ -1,5 +1,6 @@
 package com.eshop.dao;
 
+
 import java.util.List;
 
 import org.hibernate.Query;
@@ -9,29 +10,32 @@ import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.eshop.model.CartDetails;
 import com.eshop.model.CategoryDetails;
-import com.eshop.model.ProductDetails;
+import com.eshop.model.SupplierDetails;
+
+
+
 
 @Repository
-public class ProdDao {
-
+public class CategoryDao {
 	@Autowired
 	 SessionFactory sessionFactory;
-	public void insertprod(ProductDetails pp)
+	public void insertCategory(CategoryDetails c)
 	{
 		Session session=sessionFactory.openSession();
 		Transaction t=session.beginTransaction();
-		System.out.println(pp.getProductId());
-		session.saveOrUpdate(pp); 
+		
+		session.saveOrUpdate(c);
 		t.commit();
 		session.close();
 		
 	}
-	public  List retriveProd()
+	public  List retriveCategory()
 	{
 	Session session=sessionFactory.openSession();
 	Transaction t=session.beginTransaction();
-	String hql="from ProductDetails";
+	String hql="from CategoryDetails";
 	Query query=session.createQuery(hql);
 	List results= query.list();
 	System.out.println(results );
@@ -40,24 +44,25 @@ public class ProdDao {
 	
 		
 	}
-	public void deletproduct(int pid)
+	
+	public void deletcategory(int cid)
 	{
 		Session session=sessionFactory.openSession();
 		Transaction t=session.beginTransaction();
-		ProductDetails p=(ProductDetails)session.get(ProductDetails.class, pid);
-		System.out.println(p);
-		session.delete(p);
+		CategoryDetails c=(CategoryDetails)session.get(CategoryDetails.class, cid);
+		System.out.println(c);
+		session.delete(c);
 		t.commit();
 		session.close();
 	}
 	
-	public ProductDetails editproduct(int pid)
+	public CategoryDetails editcategory(int cid)
 	{
 		Session session=sessionFactory.openSession();
 		Transaction t=session.beginTransaction();
-		ProductDetails p=(ProductDetails)session.get(ProductDetails.class, pid);
-		return p;
+		CategoryDetails c=(CategoryDetails)session.get(CategoryDetails.class, cid);
+		return c;
 	}
 	
+	
 }
-  

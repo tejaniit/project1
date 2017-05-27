@@ -27,11 +27,11 @@ public class CartDao {
 		
 	}
 	
-	public  List retrivecart()
+	public  List retrivecart(String username)
 	{
 	Session session=sessionFactory.openSession();
 	Transaction t=session.beginTransaction();
-	String hql="from CartDetails";
+	String hql="from "+" CartDetails "+" where cartUser=" + "'"+username+"'";
 	Query query=session.createQuery(hql);
 	List results= query.list();
 	System.out.println(results );

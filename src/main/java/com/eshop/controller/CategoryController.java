@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.eshop.dao.CatDao;
+import com.eshop.dao.CategoryDao;
 
 import com.eshop.model.CategoryDetails;
 import com.eshop.model.SupplierDetails;
 @Controller
 public class CategoryController {
 @Autowired
-CatDao cc;
+CategoryDao cc;
 	@RequestMapping("/cat")
 	public ModelAndView adm()
 	{

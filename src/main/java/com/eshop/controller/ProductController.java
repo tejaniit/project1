@@ -17,20 +17,20 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.eshop.dao.CatDao;
-import com.eshop.dao.ProdDao;
-import com.eshop.dao.SupDao;
+import com.eshop.dao.CategoryDao;
+import com.eshop.dao.ProductDao;
+import com.eshop.dao.SupplierDao;
 import com.eshop.model.CategoryDetails;
 import com.eshop.model.ProductDetails;
 import com.eshop.model.SupplierDetails;
 @Controller
 public class ProductController {
 	@Autowired
-	CatDao cc;
+	CategoryDao cc;
 	@Autowired
-	SupDao sd;
+	SupplierDao sd;
 	@Autowired
-	 ProdDao pd;
+	 ProductDao pd;
 	@RequestMapping(value="/product",method=RequestMethod.GET)
 	public ModelAndView getProd()
 	{

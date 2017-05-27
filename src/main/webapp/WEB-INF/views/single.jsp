@@ -55,13 +55,17 @@
 </c:forEach>
 				</div>
 		<div>
-		<c:forEach var="product" items="${ProductDetails}">
-			<tr><td>
-				<form action="AddToCart">
+		<c:forEach var="product" items="${ProductDetails}">	
+		
+		
+		
+<tr><td>
+			<form action="addcart" method="post">
 
-					<input type="eladprod1" name="dpid1" value=${product.productId } /><br/>
-					
-				<input type="submit" value="AddToCart" />
+					<input type="text"  readonly="readonly" name="pid" value="${product.productId}"/>
+					<input type="text" name="quantity"/>
+					<input type="submit" value="AddToCart"/>
+		
 				</form>
 			</td></tr>
 

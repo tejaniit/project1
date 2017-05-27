@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.eshop.dao.RegDao;
+import com.eshop.dao.RegisterDao;
 import com.eshop.model.UserCredentials;
 import com.eshop.model.UserDetails;
 
 @Controller
 public class RegisterController {
 	@Autowired
-    RegDao rd;
+    RegisterDao rd;
 	
 	@RequestMapping("/reg")
 	public ModelAndView reg()
@@ -45,7 +45,7 @@ public class RegisterController {
 		ModelAndView reg2(@ModelAttribute("UserDetails") UserDetails u)
 		{
 		
-		  ModelAndView mv=new ModelAndView("regsuccess","data","welcome to project");
+		  ModelAndView mv=new ModelAndView("login","data","welcome to project");
 		  
 		  UserCredentials uc=new UserCredentials();
 		  uc.setUsername(u.getUsername());

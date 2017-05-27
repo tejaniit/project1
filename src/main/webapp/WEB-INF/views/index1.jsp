@@ -18,15 +18,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="resources/2.jpg"  style="width:100%;">
+        <img src="resources/1.jpg"  style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="resources/3.jpg"  style="width:100%;">
+        <img src="resources/2.jpg"  style="width:100%;">
       </div>
     
       <div class="item">
-        <img src="resources/4.jpg"  style="width:100%;">
+        <img src="resources/55.jpg"  style="width:100%;">
       </div>
       
     </div>

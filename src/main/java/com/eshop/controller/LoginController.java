@@ -1,4 +1,4 @@
-package com.eshop.controller;
+ package com.eshop.controller;
 
 import java.util.Collection;
 
@@ -12,14 +12,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.eshop.dao.RegDao;
+import com.eshop.dao.RegisterDao;
 import com.eshop.model.UserCredentials;
 import com.eshop.model.UserDetails;
 
 @Controller
 public class LoginController {
 @Autowired
-RegDao rd;
+RegisterDao rd;
 	
 	@RequestMapping("/Login")
 	public ModelAndView log()

@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,84 +10,144 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ include file="admin.jsp" %>
+	<%@ include file="admin.jsp"%>
 
-<form:form class="form-horizontal" method="post" action="product"	commandName="ProductDetails" enctype="multipart/form-data" >
-<center><tr>
-   <td><h1><font face="Monotype corsiva" size="7">Product Form</font><br /></h1></td>
-</tr><center>
+	<form:form class="form-horizontal" method="post" action="product"
+		commandName="ProductDetails" enctype="multipart/form-data">
+		<center>
+			<tr>
+				<td><h1>
+						<font face="Monotype corsiva" size="7">Product Form</font><br />
+					</h1></td>
+			</tr>
+			<center>
 
-<tr><td>&nbsp;</td></tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
 
-<table>
-<tr><td><b><font face="Monotype corsiva" size="3">Product Id</font><br /></b></td><td><form:input path="productId" size="25"/></td></tr>
-<tr><td>&nbsp;</td></tr>
-<tr><td><b><font face="Monotype corsiva" size="3">Product Name</font><br /></b></td><td><form:input path="productname" size="25"/></td></tr>
-<tr><td>&nbsp;</td></tr>
-<tr><td><b><font face="Monotype corsiva" size="3">Product Description</font><br /></b></td><td><form:textarea path="productdescription"  rows="5" cols="30"/></td></tr>
-<tr><td>&nbsp;</td></tr>
-<tr><td><b><font face="Monotype corsiva" size="3">Product Price</font><br /></b></td><td><form:input path="productprice" size="25"/></td></tr>
-<tr><td>&nbsp;</td></tr>
-<tr><td><b><font face="Monotype corsiva" size="3">Product Stock</font><br /></b></td><td><form:input path="productstock" size="25"/></td></tr>
-<tr><td>&nbsp;</td></tr>
-<tr><td><b><font face="Monotype corsiva" size="3">Supplier Name</font><br /></b><form:select class="form-control" path="supId">
-<form:option value="-1">select supplier name</form:option>
-<c:forEach items="${SupData}" var="sup">
-<form:option value=" ${sup.supplierId}">${sup.supplierName}</form:option>
+				<table>
+					<tr>
+						<td><b><font face="Monotype corsiva" size="3">Product
+									Id</font><br /></b></td>
+						<td><form:input path="productId" size="25" /></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td><b><font face="Monotype corsiva" size="3">Product
+									Name</font><br /></b></td>
+						<td><form:input path="productname" size="25" /></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td><b><font face="Monotype corsiva" size="3">Product
+									Description</font><br /></b></td>
+						<td><form:textarea path="productdescription" rows="5"
+								cols="30" /></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td><b><font face="Monotype corsiva" size="3">Product
+									Price</font><br /></b></td>
+						<td><form:input path="productprice" size="25" /></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td><b><font face="Monotype corsiva" size="3">Product
+									Stock</font><br /></b></td>
+						<td><form:input path="productstock" size="25" /></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td><b><font face="Monotype corsiva" size="3">Supplier
+									Name</font><br /></b>
+						<form:select class="form-control" path="supId">
+								<form:option value="-1">select supplier name</form:option>
+								<c:forEach items="${SupData}" var="sup">
+									<form:option value=" ${sup.supplierId}">${sup.supplierName}</form:option>
 
-</c:forEach>
-</form:select></tr></td>
-<tr><td>&nbsp;</td></tr>
-<tr><td><b><font face="Monotype corsiva" size="3">Category Name</font><br /></b><form:select class="form-control" path="catId">
-<form:option value="-1">select category name</form:option>
-<c:forEach items="${CatData}" var="cat">
-<form:option value=" ${cat.categoryId}">${cat.categoryName}</form:option>
-</c:forEach>
-<tr><td>&nbsp;</td></tr>
-</form:select></tr></td>
-<tr><td><b><font face="Monotype corsiva" size="3">Product Image</font><br /></b>
-<form:input type="file" path="pimage"/></td></tr>
+								</c:forEach>
+							</form:select>
+					</tr>
+					</td>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td><b><font face="Monotype corsiva" size="3">Category
+									Name</font><br /></b>
+						<form:select class="form-control" path="catId">
+								<form:option value="-1">select category name</form:option>
+								<c:forEach items="${CatData}" var="cat">
+									<form:option value=" ${cat.categoryId}">${cat.categoryName}</form:option>
+								</c:forEach>
+								<tr>
+									<td>&nbsp;</td>
+								</tr>
+							</form:select>
+					</tr>
+					</td>
+					<tr>
+						<td><b><font face="Monotype corsiva" size="3">Product
+									Image</font><br /></b> <form:input type="file" path="pimage" /></td>
+					</tr>
 
-<tr><td>&nbsp;</td></tr>
- 
-<tr><td><input type="submit" value="${bname}"></td></tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+
+					<tr>
+						<td><input type="submit" value="${bname}"></td>
+					</tr>
 
 
-</table>
-</form:form> 
+				</table>
+	</form:form>
 
-<table class="table table-bordered table-hover table-striped">
- <tr><th>Product Id</th>
-<th>Product name</th>
-<th>Supplier Id</th>
-<th>Category Id</th>
-<th>Price</th>
-<th>stock</th>
-<th>Description</th>
-<th>Edit</th>
-<th>Delete</th>
-<th>Image</th>
-</tr> 
-<c:forEach items="${Prodata}" var="product">
-<tr class="success" >
+	<table class="table table-bordered table-hover table-striped">
+		<tr>
+			<th>Product Id</th>
+			<th>Product name</th>
+			<th>Supplier Id</th>
+			<th>Category Id</th>
+			<th>Price</th>
+			<th>stock</th>
+			<th>Description</th>
+			<th>Edit</th>
+			<th>Delete</th>
+			<th>Image</th>
+		</tr>
+		<c:forEach items="${Prodata}" var="product">
+			<tr class="success">
 
-                <td>${product.productId}</td> 
-                 <td>${product.productname}</td>
-                  <td>${product.supId}</td>
-                <td> ${product.catId}</td>
-                <td>${product.productprice}</td>
-                <td>${product.productstock}</td>
-                 <td>${product.productdescription}</td>
-                 
-               
-                    
-                     <td><a href="deladprod1?adpid1=${product.productId}">Edit</a></td>
-                <td><a href="deladprod?adpid=${product.productId}">Delete</a></td>
-                <td><img src="./resources/images/${product.productId}.jpg" height="50px" width="50px"/></td> 
+				<td>${product.productId}</td>
+				<td>${product.productname}</td>
+				<td>${product.supId}</td>
+				<td>${product.catId}</td>
+				<td>${product.productprice}</td>
+				<td>${product.productstock}</td>
+				<td>${product.productdescription}</td>
 
-</tr>
-</c:forEach>
 
-</table>
+
+				<td><a href="deladprod1?adpid1=${product.productId}">Edit</a></td>
+				<td><a href="deladprod?adpid=${product.productId}">Delete</a></td>
+				<td><img src="./resources/images/${product.productId}.jpg"
+					height="50px" width="50px" /></td>
+
+			</tr>
+		</c:forEach>
+
+	</table>
 </body>
 </html>

@@ -13,7 +13,7 @@ import com.eshop.model.CategoryDetails;
 import com.eshop.model.ProductDetails;
 import com.eshop.model.SupplierDetails;
 @Repository
-public class SupDao {
+public class SupplierDao {
 
 	@Autowired
 	 SessionFactory sessionFactory;

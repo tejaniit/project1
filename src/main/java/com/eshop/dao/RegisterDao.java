@@ -1,4 +1,4 @@
- package com.eshop.dao;
+  package com.eshop.dao;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import com.eshop.model.UserDetails;
 
 @Repository
 
-public class RegDao {
+public class RegisterDao {
 	@Autowired
 	 SessionFactory sessionFactory;
 	public void insertUser(UserDetails ud)

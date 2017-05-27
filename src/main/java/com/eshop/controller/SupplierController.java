@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.eshop.dao.SupDao;
+import com.eshop.dao.SupplierDao;
 import com.eshop.model.CategoryDetails;
 import com.eshop.model.SupplierDetails;
 @Controller
 public class SupplierController {
 @Autowired
-SupDao sd;
+SupplierDao sd;
 	@RequestMapping("/sup")
 	public ModelAndView adm()
 	{
